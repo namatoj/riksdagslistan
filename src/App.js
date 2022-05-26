@@ -18,8 +18,8 @@ function App() {
         <div className={`term ${term.party}`} key={index} style={
           {
             top:`${orderScale*(Number(term.ordningsnummer)-1)}px`,
-            left:`${dayScale * utils.daysBetween("1991-09-30",term.from)}px`,
-            width: `${dayScale * utils.daysBetween(term.from, term.to) - marginPixels}px`,
+            left:`${Math.round(dayScale * utils.daysBetween("1991-09-30",term.from))}px`,
+            width: `${Math.round(dayScale * utils.daysBetween(term.from, term.to) - marginPixels)}px`,
             height: `${orderScale - 1}px`
           }
         }>
