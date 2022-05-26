@@ -15,8 +15,8 @@ export const getTerms = () => {
             if (uppdrag.roll_kod === "Riksdagsledamot" && uppdrag.ordningsnummer !== "0") {
                 terms.push({
                     ordningsnummer: uppdrag.ordningsnummer, 
-                    from: uppdrag.from, 
-                    to:uppdrag.tom, 
+                    from: uppdrag.from.split(" ")[0],
+                    to:uppdrag.tom.split(" ")[0],
                     party:member.parti, 
                     firstName:member.tilltalsnamn, 
                     lastName:member.efternamn,
