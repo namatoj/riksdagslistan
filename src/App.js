@@ -23,6 +23,7 @@ function App() {
             height: `${orderScale - 1}px`
           }
         }>
+          <span >{`${Math.round(dayScale * utils.daysBetween(term.from, term.to) - marginPixels)}px`}</span>
           <span className="firstName">{term.firstName}, </span>
           <span className="lastName">{term.lastName} </span>
         </div>
