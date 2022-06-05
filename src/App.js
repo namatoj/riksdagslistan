@@ -18,12 +18,12 @@ function App() {
         <div className={`term ${term.party}`} key={index} style={
           {
             top:`${orderScale*(Number(term.ordningsnummer)-1)}px`,
-            left:`${Math.round(dayScale * utils.daysBetween("1991-09-30",term.from))}px`,
-            width: `${Math.round(dayScale * utils.daysBetween(term.from, term.to) - marginPixels)}px`,
+            left:`${dayScale * utils.daysBetween("1991-09-30",term.from)}px`,
+            width: `${dayScale * utils.daysBetween(term.from, term.to) - marginPixels}px`,
             height: `${orderScale - 1}px`
           }
         }>
-          <span className="firstName">{term.firstName}, </span>
+          <span className="firstName">{term.firstName} </span>
           <span className="lastName">{term.lastName} </span>
         </div>
         <div className={`term-info ${term.party}`} key={`info-${index}`} style={
@@ -32,14 +32,14 @@ function App() {
             left:`${dayScale * utils.daysBetween("1991-09-30",term.from)}px`,
           }
         }>
-          <span className="firstName">{term.firstName}, </span>
+          <span className="firstName">{term.firstName} </span>
           <span className="lastName">{term.lastName} </span>
           <span className="lastName">({term.party}) </span>
         <br />
           <span className="from">{term.from}</span> - 
            <span className="to">{term.to}</span>
            <br />
-          <img src={term.photoUrl} alt={`$term.firstName $term.lastName`}/>_ 
+          <img src={term.photoUrl} alt={`$term.firstName $term.lastName`}/> 
         </div>
         </>
       )
